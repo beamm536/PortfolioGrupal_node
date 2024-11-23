@@ -1,5 +1,4 @@
-/*
-COMANDOS PARA METER POR TERMINAL ANTES DE EMPEZAR A CREAR FILES
+/*COMANDOS PARA METER POR TERMINAL ANTES DE EMPEZAR A CREAR FILES
 npm init
 npm i express
 npm i express-handlebars
@@ -8,7 +7,8 @@ nodemon (para iniciar el proyecto)
 
 //IMPORTACIONES
 const express = require("express");
-const exphbs = require("express-handlebars");
+const exphbs = require("express-handlebars");   
+const mysql = require("mysql2"); //importacion para la base de datos
 
 //servidor aplicaciones
 const app = express();
@@ -16,6 +16,14 @@ const app = express();
 //config handlebars
 app.engine("handlebars", exphbs.engine());
 app.set("view engine", "handlebars");
+
+//crear la conexion
+const conexion = mysql.createConnection({
+    host: 'localhost',
+    user: 'root',
+    password: 'programacion2023', 
+    database: 'portfolio'
+});
 
 app.use(express.static("public"));//ruta para acceder a recursos estaticos --> lo q nos cargaria de la carpeta publica de plantilla q hemos incorporado
 
