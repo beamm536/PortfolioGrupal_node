@@ -1,14 +1,17 @@
 document.addEventListener("DOMContentLoaded", function () {
   
+    // Recupera el nombre guardado en localStorage cuando la página se carga
+
+
     // Hacer una solicitud GET para obtener los datos de los acontecimientos
     fetch(`http://localhost:3000/api/acontecimientos`)
         .then((response) => response.json())
         .then((acontecimientos) => {
             console.log("Datos obtenidos de la base de datos:", JSON.stringify(acontecimientos, null, 2));
-  
+            const participantNamePassing = localStorage.getItem('participantName');
             // Filtramos los acontecimientos para obtener solo los de Marta
             const acontecimientosDePers = acontecimientos.filter(
-                (acontecimiento) => acontecimiento.pers_acontecimiento === "Marta"
+                (acontecimiento) => acontecimiento.pers_acontecimiento === participantNamePassing
             );
   
             // Si hay datos de Marta, mostramos el nombre y descripción del participante
