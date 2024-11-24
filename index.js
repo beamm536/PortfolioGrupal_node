@@ -13,6 +13,9 @@ const mysql = require("mysql2"); //importacion para la base de datos
 //servidor aplicaciones
 const app = express();
 
+//PUERTOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO
+const port = 3000;
+
 //config handlebars
 app.engine("handlebars", exphbs.engine());
 app.set("view engine", "handlebars");
@@ -67,5 +70,5 @@ app.get('/', (req, res) => {
 //iniciamos el servidor en el puerto 3000
 //app.listen(3000);
 app.listen(3000, () => {
-    console.log('Servidor corriendo en http://localhost:3000');
+    console.log(`Servidor corriendo en http://localhost:${port}`);
 });
