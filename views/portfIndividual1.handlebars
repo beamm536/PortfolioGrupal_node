@@ -1,0 +1,29 @@
+<!--npm init -y  # Inicializa el proyecto Node.js
+npm install express mysql2 cors  # Instala Express, mysql2 y CORS
+-->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Línea del Tiempo</title>
+  <link rel="stylesheet" href="/css/stylesPI.css">
+</head>
+<body>
+    <div class="presentation">
+        <div class="presentation-text">
+            <h1 id="participant-name"></h1> <!-- Este valor será reemplazado dinámicamente -->
+            <p id="participant-description"></p> <!-- Este valor será reemplazado dinámicamente -->
+        </div>
+    </div>
+      
+    <div class="timeline-container">
+        <div class="timeline">
+          <div class="timeline-line"></div> <!-- Línea central -->
+          <!-- Los puntos y contenidos se insertarán dinámicamente aquí -->
+        </div>
+      </div>
+
+  <script src="/js/scriptPI.js"></script>
+</body>
+</html>
