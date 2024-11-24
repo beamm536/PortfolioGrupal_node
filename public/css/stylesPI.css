@@ -130,7 +130,7 @@ body {
 /* Estilo para la sección de presentación */
 .presentation {
   height: 100vh;
-  background-image: url('imgs/backround-indiv-portfolio.png'); /* Pon aquí la URL de tu imagen */
+  background-image: url('/imgs/backround-indiv-portfolio.png'); /* Pon aquí la URL de tu imagen */
   background-size: cover;
   background-position: center;
   color: white;
