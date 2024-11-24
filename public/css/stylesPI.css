@@ -1,0 +1,172 @@
+/* Estilo general */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #f7f7f7;
+    color: #333;
+  }
+  
+  .timeline-container {
+    padding: 40px 20px;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  .timeline {
+    position: relative;
+    padding: 20px 0;
+  }
+  
+  .timeline-line {
+    content: '';
+    position: absolute;
+    width: 6px;
+    background-color: #000;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: -1;
+    border-radius: 4px;
+  }
+  
+  /* Estilo de los elementos */
+  .timeline-item {
+    display: flex;
+    position: relative;
+    margin: 150px 0;
+    width: 100%;
+  }
+  
+  .timeline-item.left {
+    justify-content: flex-end;
+  }
+  
+  .timeline-item.right {
+    justify-content: flex-start;
+  }
+  
+  .timeline-dot {
+    width: 25px;
+    height: 25px;
+    background-color: black;
+    border: 2px solid black;
+    border-radius: 50%;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .timeline-content {
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    position: absolute;
+    top: 0;
+    max-width: calc(50% - 40px); /* Máximo ancho sin tocar la línea central */
+    min-width: 200px; /* Mínimo ancho para evitar que sea muy pequeño */
+    transform: translateY(-50%);
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    word-wrap: break-word; /* Ajustar contenido largo */
+  }
+  
+  .timeline-content img {
+    width: 100px;
+    height: 100px;
+    margin-right: 15px;
+    object-fit: cover;
+  }
+  
+  .timeline-item.left .timeline-content {
+    left: calc(50% - 55%);
+    text-align: right;
+  }
+  
+  .timeline-item.right .timeline-content {
+    left: calc(50% + 10%);
+    text-align: left;
+  }
+  
+  .timeline-label {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #333;
+    position: absolute;
+    top: 0;
+    white-space: nowrap;
+  }
+  
+  .timeline-item.left .timeline-label {
+    left: calc(50% + 20px);
+    text-align: left;
+  }
+  
+  .timeline-item.right .timeline-label {
+    right: calc(50% + 20px);
+    text-align: right;
+  }
+
+  .image-placeholder {
+    width: 100px;
+    height: 100px;
+    background-color: pink;  /* Rosa */
+    border-radius: 8px;
+    display: inline-block;
+    text-align: center;
+    line-height: 100px;
+    color: white;
+    font-size: 1rem;
+    font-weight: bold;
+  }
+
+  
+/* Estilo para la sección de presentación */
+.presentation {
+  height: 100vh;
+  background-image: url('/imgs/backround-indiv-portfolio.png'); /* Pon aquí la URL de tu imagen */
+  background-size: cover;
+  background-position: center;
+  color: white;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 0 20px;
+}
+
+.presentation-text {
+  max-width: 600px;
+  color: black;
+  font-size:small;
+  line-height:small;
+}
+
+.presentation h1 {
+  font-size: 3.5rem;
+  margin-bottom: 15px;
+}
+  
+  /* Ocultar contenido por defecto */
+  .hidden {
+    display: none;
+  }
+  
+  /* Diseño responsive */
+  @media (max-width: 768px) {
+    .timeline-content {
+      width: 80%;
+      position: relative;
+      text-align: center;
+    }
+  
+    .timeline-label {
+      display: none;
+    }
+  }
+  
