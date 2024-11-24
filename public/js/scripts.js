@@ -51,4 +51,12 @@ window.addEventListener('DOMContentLoaded', event => {
         });
     });
 
+    // En el archivo donde tienes el enlace (por ejemplo, en tu archivo de botones)
+document.getElementById('btnPortfolioIndiv').addEventListener('click', function(event) {
+    // Al hacer clic en el enlace, guarda el nombre en localStorage
+    const participantName = event.target.textContent; // "Marta"
+    localStorage.setItem('participantName', participantName); // Guarda en localStorage
+});
+
+
 });
