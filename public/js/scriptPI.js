@@ -4,7 +4,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
     // Hacer una solicitud GET para obtener los datos de los acontecimientos
+
     fetch(`http://localhost:3000/api/acontecimientos`)
+
         .then((response) => response.json())
         .then((acontecimientos) => {
             console.log("Datos obtenidos de la base de datos:", JSON.stringify(acontecimientos, null, 2));
