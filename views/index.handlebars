@@ -15,8 +15,11 @@
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
     <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet"
         type="text/css" />
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
     <!-- Core theme CSS (includes Bootstrap)-->
-    <link href="/css/styles.css" rel="stylesheet" />
+    <link href="../css/styles.css" rel="stylesheet" />
     <script src="/js/scripts.js"></script>
 </head>
 
@@ -34,7 +37,7 @@
             <div class="collapse navbar-collapse" id="navbarResponsive">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded"
-                            href="#portfolio">Portfolio</a></li>
+                            href="/">Portfolio</a></li>
                     <!-- About with Submenu -->
                     <li class="nav-item dropdown mx-0 mx-lg-1">
                         <a class="nav-link py-3 px-0 px-lg-3 rounded dropdown-toggle" href="#about" id="aboutDropdown"
@@ -42,9 +45,9 @@
                             About
                         </a>
                         <ul class="dropdown-menu bg-secondary text-uppercase" aria-labelledby="aboutDropdown">
-                            <li><a id="btnPortfolioIndiv" class="dropdown-item text-white" href="portfIndividual1">Alba</a></li>
-                            <li><a id="btnPortfolioIndiv" class="dropdown-item text-white" href="portfIndividual1">Pedro</a></li>
-                            <li><a id="btnPortfolioIndiv" class="dropdown-item text-white" href="portfIndividual1">Beatriz</a></li>
+                            <li><a id="btnPortfolioIndiv" class="dropdown-item text-white btnPortfolioIndiv" href="portfIndividual1">Alba</a></li>
+                            <li><a id="btnPortfolioIndiv" class="dropdown-item text-white btnPortfolioIndiv" href="portfIndividual1">Pedro</a></li>
+                            <li><a id="btnPortfolioIndiv" class="dropdown-item text-white btnPortfolioIndiv" href="portfIndividual1">Beatriz</a></li>
                         </ul>
                     </li>
                     
@@ -57,7 +60,7 @@
     <header class="masthead bg-primary text-white text-center">
         <div class="container d-flex align-items-center flex-column">
             <!-- Masthead Avatar Image-->
-            <img class="masthead-avatar mb-5" src="assets/img/avataaars.svg" alt="..." />
+            <img class="masthead-avatar mb-5" src="../assets/imgsGrupal/avataaars.svg" alt="..." />
             <!-- Masthead Heading-->
             <h1 class="masthead-heading text-uppercase mb-0">Portfolio Grupal :)</h1>
 
@@ -71,13 +74,13 @@
             <!-- Masthead Subheading-->
 
             <div class="mt-4">
-                <a id="btnPortfolioIndiv" class="uniform-btn mx-2" href="portfIndividual1">Pablo</a>
-                <a id="btnPortfolioIndiv" class="uniform-btn mx-2" href="portfIndividual1">Pedro</a>
-                <a id="btnPortfolioIndiv" class="uniform-btn mx-2" href="portfIndividual1">Beatriz</a>
+                <a  class="uniform-btn mx-2 btnPortfolioIndiv" href="portfIndividual1">Marta</a>
+                <a  class="uniform-btn mx-2 btnPortfolioIndiv" href="portfIndividual1">Pedro</a>
+                <a  class="uniform-btn mx-2 btnPortfolioIndiv" href="portfIndividual1">Beatriz</a>
             </div>
         </div>
     </header>
-    <!-- Portfolio Section-->
+    {{!-- <!-- Portfolio Section-->
     <section class="page-section portfolio" id="portfolio">
         <div class="container">
             <!-- Portfolio Section Heading-->
@@ -98,7 +101,7 @@
                             <div class="portfolio-item-caption-content text-center text-white"><i
                                     class="fas fa-plus fa-3x"></i></div>
                         </div>
-                        <img class="img-fluid" src="assets/img/portfolio/cabin.png" alt="..." />
+                        <img class="img-fluid" src="../assets/imgsGrupal/portfolio/cabin.png" alt="..." />
                     </div>
                 </div>
                 <!-- Portfolio Item 2-->
@@ -109,7 +112,7 @@
                             <div class="portfolio-item-caption-content text-center text-white"><i
                                     class="fas fa-plus fa-3x"></i></div>
                         </div>
-                        <img class="img-fluid" src="assets/img/portfolio/cake.png" alt="..." />
+                        <img class="img-fluid" src="../assets/imgsGrupal/portfolio/cake.png" alt="..." />
                     </div>
                 </div>
                 <!-- Portfolio Item 3-->
@@ -120,14 +123,149 @@
                             <div class="portfolio-item-caption-content text-center text-white"><i
                                     class="fas fa-plus fa-3x"></i></div>
                         </div>
-                        <img class="img-fluid" src="assets/img/portfolio/circus.png" alt="..." />
+                        <img class="img-fluid" src="assets/imgsGrupal/portfolio/circus.png" alt="..." />
                     </div>
                 </div>
 
 
             </div>
         </div>
-    </section>
+    </section> --}}
+    <section class="page-section portfolio" id="portfolio">
+    <div class="container">
+        <!-- Portfolio Section Heading-->
+        <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">Proyectos</h2>
+        <!-- Icon Divider-->
+        <div class="divider-custom">
+            <div class="divider-custom-line"></div>
+            <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+            <div class="divider-custom-line"></div>
+        </div>
+        <!-- Portfolio Grid Items-->
+        <div class="row justify-content-left" id="portfolioItems">
+            <!-- Los ítems se generarán dinámicamente aquí -->
+        </div>
+    </div>
+</section>
+
+<style>
+    /* Ajusta el tamaño del contenedor */
+    .portfolio-item {
+        width: 350px; /* Ancho fijo */
+        height: 250px; /* Alto fijo */
+        position: relative;
+    }
+
+    /* Imagen dentro del contenedor */
+    .portfolio-item img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 5px;
+    }
+
+    /* Fondo gris y texto en caso de error */
+    .portfolio-item .fallback {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: gray;
+        color: white;
+        width: 100%;
+        height: 100%;
+        border-radius: 5px;
+        text-align: center;
+    }
+
+    /* Estilo del ícono de "+" */
+    .portfolio-item-caption {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.6);
+        opacity: 0;
+        transition: opacity 0.3s ease;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .portfolio-item:hover .portfolio-item-caption {
+        opacity: 1;
+    }
+
+ /* Contenedor de tecnologías */
+.technologies-container {
+    display: flex; /* Alineación de elementos en fila */
+    flex-wrap: wrap; /* Permite que los divs se ajusten a nuevas filas si el espacio es insuficiente */
+    gap: 10px; /* Espaciado entre los divs */
+    justify-content: center; /* Alineación de los elementos al principio */
+    margin-bottom: 5%;
+}
+
+/* Estilo de cada div de tecnología */
+.technology-item {
+    background-color: #d3d3d3; /* Fondo gris */
+    padding: 8px 15px; /* Espaciado interno */
+    border-radius: 12px; /* Esquinas redondeadas */
+    color: #333; /* Texto oscuro */
+    font-weight: bold; /* Texto en negrita */
+    text-align: center;
+    min-width: 120px; /* Tamaño mínimo del div */
+    white-space: nowrap; /* Evita que el texto se rompa en varias líneas */
+    overflow: hidden; /* Evita el desbordamiento de contenido */
+}
+
+
+
+</style>
+
+<script>
+    const apiUrl = "http://localhost:3000/api/portfoliosgrupales";
+
+    async function loadPortfolioItems() {
+        try {
+            const response = await fetch(apiUrl);
+            const portfolios = await response.json();
+
+            const itemsContainer = document.getElementById("portfolioItems");
+
+            portfolios.forEach((portfolio, index) => {
+                const itemHTML = `
+                    <div class="col-md-6 col-lg-4 mb-5">
+                        <div class="portfolio-item mx-auto" data-bs-toggle="modal" data-bs-target="#portfolioModal${index + 1}">
+                            <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
+                                <div class="portfolio-item-caption-content text-center text-white"><i class="fas fa-plus fa-3x"></i></div>
+                            </div>
+                            <img class="img-fluid" src="${portfolio.imgProyecto}" alt="${portfolio.nombreProyecto}" 
+                                onerror="handleImageError(this, '${portfolio.nombreProyecto}')"/>
+                        </div>
+                    </div>
+                `;
+                itemsContainer.innerHTML += itemHTML;
+            });
+        } catch (error) {
+            console.error("Error al cargar los ítems del portafolio:", error);
+        }
+    }
+
+    // Función para manejar errores al cargar imágenes
+    function handleImageError(imgElement, projectName) {
+        const fallbackDiv = document.createElement("div");
+        fallbackDiv.classList.add("fallback");
+        fallbackDiv.textContent = projectName;
+
+        const parent = imgElement.parentElement;
+        parent.removeChild(imgElement);
+        parent.appendChild(fallbackDiv);
+    }
+
+    // Cargar los ítems del portafolio
+    loadPortfolioItems();
+</script>
+
     <!-- About Section-->
     <section class="page-section bg-primary text-white mb-0" id="about">
         <div class="container">
@@ -195,7 +333,95 @@
         <div class="container"><small>Copyright &copy; Your Website 2023</small></div>
     </div>
     <!-- Portfolio Modals-->
-    <!-- Portfolio Modal 1-->
+    <!-- Placeholder donde se generarán los modales -->
+<div id="portfolioModals"></div>
+
+<script>
+    // URL de la API
+    const apiUrl2 = "http://localhost:3000/api/portfoliosgrupales";
+
+    // Función para cargar y generar los modales
+    async function loadPortfolioModals() {
+    try {
+        // Realizar la solicitud a la API
+        const response = await fetch(apiUrl2);
+        const proyectos = await response.json();
+
+        // Seleccionar el contenedor donde se agregarán los modales
+        const modalContainer = document.getElementById("portfolioModals");
+
+        // Recorrer los proyectos y crear modales dinámicamente
+        proyectos.forEach((proyecto, index) => {
+            // Dividir las tecnologías por coma y espacio
+            const tecnologiasArray = proyecto.tecnologiasProyecto.split(", ");
+
+            // Crear los divs para las tecnologías con flex
+            const tecnologiasHTML = tecnologiasArray.map(tecnologia => {
+                return `<div class="technology-item">${tecnologia}</div>`;
+            }).join(''); // Unir todos los divs con un espacio entre ellos
+
+            // Crear el HTML del modal
+            const modalHTML = `
+                <!-- Portfolio Modal ${index + 1} -->
+                <div class="portfolio-modal modal fade" id="portfolioModal${index + 1}" tabindex="-1"
+                    aria-labelledby="portfolioModal${index + 1}" aria-hidden="true">
+                    <div class="modal-dialog modal-xl">
+                        <div class="modal-content">
+                            <div class="modal-header border-0">
+                                <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body text-center pb-5">
+                                <div class="container">
+                                    <div class="row justify-content-center">
+                                        <div class="col-lg-8">
+                                            <!-- Portfolio Modal - Title -->
+                                            <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">
+                                                ${proyecto.nombreProyecto}
+                                            </h2>
+                                            <!-- Icon Divider -->
+                                            <div class="divider-custom">
+                                                <div class="divider-custom-line"></div>
+                                                <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+                                                <div class="divider-custom-line"></div>
+                                            </div>
+                                            <!-- Portfolio Modal - Image -->
+                                            <img class="img-fluid rounded mb-5" src="${proyecto.imgProyecto}" alt="${proyecto.nombreProyecto}" />
+                                            <!-- Portfolio Modal - Text -->
+                                            <p class="mb-4"> ${proyecto.descripcionProyecto}</p>
+                                            <p class="mb-4"><strong>Duración:</strong> ${proyecto.duracionProyecto}</p>
+                                            <p class="mb-4"><strong>Tecnologías Empleadas:</strong></p>
+                                            <div class="technologies-container">
+                                                ${tecnologiasHTML} <!-- Inserta los divs generados con las tecnologías -->
+                                            </div>
+                                            <button class="btn btn-primary" data-bs-dismiss="modal">
+                                                <i class="fas fa-xmark fa-fw"></i>
+                                                Close Window
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            `;
+            // Insertar el modal generado en el contenedor
+            modalContainer.innerHTML += modalHTML;
+        });
+    } catch (error) {
+        console.error("Error al cargar los modales:", error);
+    }
+}
+
+// Llamar a la función para cargar los modales
+loadPortfolioModals();
+
+
+
+
+</script>
+
+    {{!-- <!-- Portfolio Modal 1-->
     <div class="portfolio-modal modal fade" id="portfolioModal1" tabindex="-1" aria-labelledby="portfolioModal1"
         aria-hidden="true">
         <div class="modal-dialog modal-xl">
@@ -215,11 +441,16 @@
                                     <div class="divider-custom-line"></div>
                                 </div>
                                 <!-- Portfolio Modal - Image-->
-                                <img class="img-fluid rounded mb-5" src="assets/img/portfolio/cabin.png" alt="..." />
+                                <img class="img-fluid rounded mb-5" src="assets/imgsGrupal/portfolio/cabin.png" alt="..." />
                                 <!-- Portfolio Modal - Text-->
-                                <p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque
+                                <p class="mb-4">Descripcion Proyecto :Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque
                                     assumenda ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam
                                     velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur itaque. Nam.
+                                </p>
+                                <p class="mb-4">Duración: 12345676875645342sfdsfghdfosd2º342536zvcxbvcnbdgfhdgf</p>
+                                <p class="mb-4">Tecnologías empleadas: Lorem, ipsum dolor sit amet consectetur adipisicing elit. Et commodi
+                                     ullam provident officia? Veniam mollitia error impedit consequuntur culpa quia optio, quas, dolorum maxime 
+                                     quam laboriosam sed amet omnis animi.
                                 </p>
                                 <button class="btn btn-primary" data-bs-dismiss="modal">
                                     <i class="fas fa-xmark fa-fw"></i>
@@ -252,7 +483,7 @@
                                     <div class="divider-custom-line"></div>
                                 </div>
                                 <!-- Portfolio Modal - Image-->
-                                <img class="img-fluid rounded mb-5" src="assets/img/portfolio/cake.png" alt="..." />
+                                <img class="img-fluid rounded mb-5" src="assets/imgsGrupal/portfolio/cake.png" alt="..." />
                                 <!-- Portfolio Modal - Text-->
                                 <p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque
                                     assumenda ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam
@@ -289,7 +520,7 @@
                                     <div class="divider-custom-line"></div>
                                 </div>
                                 <!-- Portfolio Modal - Image-->
-                                <img class="img-fluid rounded mb-5" src="assets/img/portfolio/circus.png" alt="..." />
+                                <img class="img-fluid rounded mb-5" src="assets/imgsGrupal/portfolio/circus.png" alt="..." />
                                 <!-- Portfolio Modal - Text-->
                                 <p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque
                                     assumenda ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam
@@ -305,7 +536,7 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> --}}
 
     <!-- Bootstrap core JS-->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>

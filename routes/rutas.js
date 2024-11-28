@@ -33,6 +33,22 @@ router.get('/api/acontecimientos', (req, res) => {
     });
   });
 
+  //Ruta para obtener los portfolios grupales
+  router.get('/api/portfoliosgrupales', (req, res) => {
+    const query2 = 'SELECT nombreProyecto, descripcionProyecto, duracionProyecto, tecnologiasProyecto, imgProyecto FROM proyectosGrupales;';
+
+    
+    conexion.query(query2, (err2, results2) => {
+      if (err2) {
+        res.status(500).send('Error en la base de datos');
+        return;
+      }
+  
+      console.log('Resultados de los acontecimientos:', results2);  // Imprimir los resultados de la consulta
+      res.json(results2);  // Enviar los resultados como JSON
+    });
+  });  
+
 //RUTA PARA LA PAGINA DE PRUEBA PORTFOLIO INDIVIDUAL
 router.get('/portfIndividual1', (req, res) => {
     res.render('portfIndividual1', { 
