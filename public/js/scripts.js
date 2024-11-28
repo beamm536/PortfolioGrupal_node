@@ -51,12 +51,14 @@ window.addEventListener('DOMContentLoaded', event => {
         });
     });
 
-    // En el archivo donde tienes el enlace (por ejemplo, en tu archivo de botones)
-document.getElementById('btnPortfolioIndiv').addEventListener('click', function(event) {
-    // Al hacer clic en el enlace, guarda el nombre en localStorage
-    const participantName = event.target.textContent; // "Marta"
-    localStorage.setItem('participantName', participantName); // Guarda en localStorage
+    // Selecciona todos los elementos con la clase 'btnPortfolioIndiv'
+document.querySelectorAll('.btnPortfolioIndiv').forEach(function(button) {
+    // Agrega un evento 'click' a cada elemento
+    button.addEventListener('click', function(event) {
+        // Al hacer clic en el enlace, guarda el nombre en localStorage
+        const participantName = event.target.textContent; // Obtiene el texto del elemento
+        localStorage.setItem('participantName', participantName); // Guarda en localStorage
+    });
 });
-
 
 });

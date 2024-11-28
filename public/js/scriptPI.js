@@ -1,10 +1,11 @@
+
 document.addEventListener("DOMContentLoaded", function () {
-  
-    // Recupera el nombre guardado en localStorage cuando la página se carga
 
-
+    
     // Hacer una solicitud GET para obtener los datos de los acontecimientos
+
     fetch(`http://localhost:3000/api/acontecimientos`)
+
         .then((response) => response.json())
         .then((acontecimientos) => {
             console.log("Datos obtenidos de la base de datos:", JSON.stringify(acontecimientos, null, 2));
@@ -14,10 +15,53 @@ document.addEventListener("DOMContentLoaded", function () {
                 (acontecimiento) => acontecimiento.pers_acontecimiento === participantNamePassing
             );
   
+
             // Si hay datos de Marta, mostramos el nombre y descripción del participante
             if (acontecimientosDePers.length > 0) {
+
+                // Nombre dinámico de la imagen
+
+                const imageName = `${participantNamePassing}.png`;
+                const imageName2 = `${participantNamePassing}2.png`;
+
+                // Selecciona los elementos
+                const presentation = document.querySelector('.presentation');
+                const imgMovil = document.querySelector('.imgMovil');
+              
+                // Crea una nueva instancia de un objeto Image para verificar si la imagen existe
+                const img = new Image();
+                img.src = `../assets/imgsIndiv/${imageName}`;
+                console.log(img.src);
+
+                const img2 = new Image();
+                img2.src = `../assets/imgsIndiv/${imageName2}`;
+                console.log(img.src);
+              
+                // Verifica si la imagen se carga correctamente
+                img.onload = function() {
+                  // Si la pantalla es lo suficientemente grande (tablet y ordenador)
+                  if (window.innerWidth >= 1025) {
+                    presentation.style.backgroundImage = `url('../assets/imgsIndiv/${imageName}')`;
+                    presentation.style.backgroundSize = "cover";
+                    presentation.style.backgroundPosition = "center";
+                  } else {
+                    // Si la pantalla es pequeña (móvil), muestra la imagen en el div imgMovil
+                    imgMovil.style.backgroundImage = `url('../assets/imgsIndiv/${imageName2}')`;
+                    imgMovil.style.backgroundSize = "cover";
+                    imgMovil.style.backgroundPosition = "center";
+                  }
+                };
+              
+                // Si la imagen no se carga (error 404 o cualquier otro), establece el fondo gris
+                img.onerror = function() {
+                  presentation.style.backgroundColor = "gray";
+                  imgMovil.style.backgroundColor = "gray"; // También asegúrate de que el div tenga fondo gris en caso de error
+                };
+              
+
                 const { nombre_participante, descripcion_participante } = acontecimientosDePers[0];
   
+                
                 // Actualizamos el contenido de la presentación
                 const participantNameElement = document.getElementById("participant-name");
                 const nombreParticipante = nombre_participante; // Aquí asignas el valor dinámico del json
