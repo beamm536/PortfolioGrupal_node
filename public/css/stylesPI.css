@@ -217,15 +217,18 @@ body {
 /* Estilo para la sección de presentación */
 .presentation {
   height: calc(100vh - 70px); /* Ajusta esta altura según el tamaño del navbar */
-  background-image: url('../assets/imgsIndiv/backround-indiv-portfolio.png'); /* Imagen de fondo */
-  background-size: cover;
-  background-position: center;
+  
   color: white;
   display: flex;
   justify-content: flex-start;
   align-items: center;
   padding: 0 20px;
-  margin-top: 70px; /* Asegúrate de que el margen sea suficiente para que no se solape */
+  margin-top: 7%; /* Asegúrate de que el margen sea suficiente para que no se solape */
+  position: relative;
+}
+
+#participant-name, #participant-description {
+  text-align: left; /* Alineación por defecto a la izquierda */
 }
 
 
@@ -244,6 +247,37 @@ body {
   /* Ocultar contenido por defecto */
   .hidden {
     display: none;
+  }
+
+  .imgMovil {
+    
+    width:auto;
+    height: 120px;
+    background-size: cover;
+    background-position: center;
+  }
+  
+  /* Estilos responsivos */
+  @media (max-width: 1024px) {/*Ns pq no me funciona en tablet*/
+    .presentation {
+      background-image: none; /* Elimina el fondo gris en pantallas más grandes */
+      display: flex;
+    justify-content: center; /* Centra los elementos horizontalmente */
+    align-items: center;     /* Centra los elementos verticalmente */
+    text-align: center; 
+    }
+
+    #participant-name, #participant-description {
+      text-align: center; /* Centra el texto dentro de sus contenedores */
+      margin: 10px 0;     /* Un pequeño margen entre los elementos */
+    }
+    .participant-name{
+      text-align: center;
+    }
+  
+    .imgMovil {
+      display: block; /* Muestra la imagen de fondo en dispositivos más pequeños */
+    }
   }
   
   /* Diseño responsive 
