@@ -7,7 +7,7 @@ const mysql = require("mysql2"); //importacion para la base de datos
 const conexion = mysql.createConnection({
     host: 'localhost',
     user: 'root',
-    password: '', 
+    password: 'programacion2023', 
     database: 'portfolio',
     
 });
@@ -71,10 +71,3 @@ module.exports = router;
 
 
 
-//traemos el enrutador def express
-/*
-ESTE ES EL CODIGO DE RUBEN Q TENIA EN ESTE ARCHIVO
-const router = express.Router();
-router.get("/", (req, res)=>{
-    res.render("misitioHome", {layout:"misitio"});
-});*/
