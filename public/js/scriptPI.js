@@ -15,19 +15,40 @@ document.addEventListener("DOMContentLoaded", function () {
                 (acontecimiento) => acontecimiento.pers_acontecimiento === participantNamePassing
             );
   
-            if(participantNamePassing === 'Alba'){
-                let parrafoIntro = document.getElementById('participant-description'); 
-                parrafoIntro.style.color = 'white'; 
+            // if(participantNamePassing === 'Alba'){
+            //     let parrafoIntro = document.getElementById('participant-description'); 
+            //     parrafoIntro.style.color = 'white'; 
 
-                let tituloNombre = document.getElementById('participant-name'); 
-                tituloNombre.style.color = 'white';
+            //     let tituloNombre = document.getElementById('participant-name'); 
+            //     tituloNombre.style.color = 'white';
 
-                let githubLink = document.getElementById('github-link');
-                githubLink.style.color = 'white';
-                githubLink.href = 'https://github.com/AlbaCastilla';
-                githubLink.innerHTML = '<i class="fab fa-github"></i> ' + participantNamePassing + ' - ' + githubLink.innerHTML;
+            //     let githubLink = document.getElementById('github-link');
+            //     githubLink.style.color = 'white';
+            //     githubLink.href = 'https://github.com/AlbaCastilla';
+            //     githubLink.innerHTML = '<i class="fab fa-github"></i> ' + participantNamePassing + ' - ' + githubLink.innerHTML;
                 
-            }
+            // }
+            
+            if (participantNamePassing === 'Alba') {
+              let parrafoIntro = document.getElementById('participant-description'); 
+              let tituloNombre = document.getElementById('participant-name'); 
+              let githubLink = document.getElementById('github-link');
+              
+              // Check if the screen width is less than or equal to 768px (mobile size)
+              if (window.innerWidth <= 768) {
+                  parrafoIntro.style.color = 'black';
+                  tituloNombre.style.color = 'black';
+                  githubLink.style.color = 'black';
+              } else {
+                  parrafoIntro.style.color = 'white';
+                  tituloNombre.style.color = 'white';
+                  githubLink.style.color = 'white';
+              }
+          
+              githubLink.href = 'https://github.com/AlbaCastilla';
+              githubLink.innerHTML = '<i class="fab fa-github"></i> ' + participantNamePassing + ' - ' + githubLink.innerHTML;
+          }
+          
             if(participantNamePassing === 'Pedro'){
               let githubLink = document.getElementById('github-link');
               githubLink.style.color = 'black';

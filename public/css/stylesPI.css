@@ -163,6 +163,8 @@ body {
 }
 /* Ajustes para pantallas móviles */
 @media (max-width: 767px) {
+  
+ 
   .timeline-line {
     left: 0; /* Asegura que la línea esté alineada al borde izquierdo */
     transform: translateX(0); /* Sin desplazamiento */
@@ -227,7 +229,9 @@ body {
   margin-top: 7%; /* Asegúrate de que el margen sea suficiente para que no se solape */
   position: relative;
 }
-
+#participant-name{
+  margin-top: 15%;
+}
 #participant-name, #participant-description {
   text-align: left; /* Alineación por defecto a la izquierda */
 }
@@ -282,17 +286,76 @@ body {
       
     }
   }
+
+  /* Estilos responsive para móviles */
+
+@media (max-width: 767px) {
+  .presentation {
+    height: calc(100vh - 70px); /* Ajusta según el tamaño del navbar */
+    color: white;
+    display: flex;
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center; /* Centra verticalmente */
+    padding: 0 20px;
+    margin-top: 7%; /* Asegura que no se solape con el navbar */
+    position: relative;
+  }
   
-  /* Diseño responsive 
-  @media (max-width: 768px) {
-    .timeline-content {
-      width: 80%;
-      position: relative;
-      text-align: center;
-    }
+  /* Estilo para texto en la presentación */
+  #participant-name {
+    margin-top: 15%;
+    font-size: 2rem; /* Ajusta el tamaño del texto para móviles */
+  }
   
-    .timeline-label {
-      display: none;
-    }
-  }*/
+  #participant-description {
+    font-size: 1rem; /* Texto más pequeño en dispositivos móviles */
+    line-height: 1.5; /* Mejor legibilidad */
+    margin: 15px 0; /* Separación con el nombre */
+  }
   
+  .presentation-text {
+    max-width: 90%; /* Asegura que el contenido no ocupe todo el ancho */
+    color: black;
+    text-align: center; /* Centra el texto en móviles */
+  }
+  
+  /* Imagen móvil */
+  .imgMovil {
+    display: block; /* Muestra la imagen de fondo en dispositivos más pequeños */
+    
+  }
+  
+  .presentation {
+    flex-direction: column; /* Apila los elementos verticalmente */
+    height: 100vh; /* Ocupa toda la pantalla */
+    padding: 20px; /* Agrega algo de padding */
+  }
+
+  #participant-name {
+    margin-top: 20px; /* Ajuste del margen superior */
+    font-size: 1.8rem; /* Reduce ligeramente el tamaño */
+    text-align: center; /* Centra el nombre */
+  }
+
+  #participant-description {
+    font-size: 0.9rem; /* Reduce el tamaño del texto */
+    line-height: 1.4;
+    margin: 10px 0; /* Espaciado adicional */
+    text-align: center; /* Centra la descripción */
+  }
+
+  .presentation-text {
+    max-width: 100%; /* Asegura que el contenido use el ancho disponible */
+    padding: 0 15px; /* Añade un pequeño padding lateral */
+    text-align: center; /* Centra todo el contenido */
+  }
+
+  #github-link a {
+    font-size: 1.2rem; /* Cambia este valor según el tamaño que prefieras */
+  }
+  .imgMovil {
+    margin-top: 1%;
+    display: block; /* Muestra la imagen de fondo en dispositivos más pequeños */
+    
+  }
+}
