@@ -15,6 +15,32 @@ document.addEventListener("DOMContentLoaded", function () {
                 (acontecimiento) => acontecimiento.pers_acontecimiento === participantNamePassing
             );
   
+            if(participantNamePassing === 'Alba'){
+                let parrafoIntro = document.getElementById('participant-description'); 
+                parrafoIntro.style.color = 'white'; 
+
+                let tituloNombre = document.getElementById('participant-name'); 
+                tituloNombre.style.color = 'white';
+
+                let githubLink = document.getElementById('github-link');
+                githubLink.style.color = 'white';
+                githubLink.href = 'https://github.com/AlbaCastilla';
+                githubLink.innerHTML = '<i class="fab fa-github"></i> ' + participantNamePassing + ' - ' + githubLink.innerHTML;
+                
+            }
+            if(participantNamePassing === 'Pedro'){
+              let githubLink = document.getElementById('github-link');
+              githubLink.style.color = 'black';
+              githubLink.href = 'https://github.com/Pedromrtzz';
+              githubLink.innerHTML = '<i class="fab fa-github"></i> ' + participantNamePassing + ' - ' + githubLink.innerHTML;
+            }
+            if(participantNamePassing === 'Beatriz'){
+              let githubLink = document.getElementById('github-link');
+              githubLink.style.color = 'black';
+              githubLink.href = 'https://github.com/beamm536';
+              githubLink.innerHTML = '<i class="fab fa-github"></i> ' + participantNamePassing + ' - ' + githubLink.innerHTML;
+            }
+
 
             // Si hay datos de Marta, mostramos el nombre y descripción del participante
             if (acontecimientosDePers.length > 0) {
@@ -143,6 +169,10 @@ document.addEventListener("DOMContentLoaded", function () {
         })
         .catch((error) => console.error("Error al cargar los acontecimientos:", error));
   });
+
+  function setParticipantName(name) {
+    localStorage.setItem('participantName', name);
+  }
   
   function typeWriterEffect(element, text, speed = 100) {
     element.textContent = ""; // Limpia el contenido del elemento

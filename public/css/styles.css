@@ -246,8 +246,9 @@ sup {
 }
 
 a {
-  color: var(--bs-link-color);
-  text-decoration: underline;
+  text-decoration: none;
+  font-weight: 800;
+  font-size: x-large;
 }
 a:hover {
   color: white;
@@ -11040,6 +11041,7 @@ html {
 }
 .masthead .masthead-avatar {
   width: 15rem;
+  filter: drop-shadow(4px 4px 6px rgba(0, 0, 0, 0.8));
 }
 
 @media (min-width: 992px) {

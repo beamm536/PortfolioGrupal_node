@@ -23,7 +23,7 @@ npm install express mysql2 cors  # Instala Express, mysql2 y CORS
   <!-- Navigation-->
     <nav class="navbar navbar-expand-lg bg-secondary text-uppercase fixed-top" id="mainNav">
         <div class="container">
-            <a class="navbar-brand" href="#page-top">Pitufines ^^ </a>
+            <a class="navbar-brand" href="#page-top">Pitufines de DAM </a>
             <button class="navbar-toggler text-uppercase font-weight-bold bg-primary text-white rounded" type="button"
                 data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive"
                 aria-expanded="false" aria-label="Toggle navigation">
@@ -38,12 +38,15 @@ npm install express mysql2 cors  # Instala Express, mysql2 y CORS
                     <li class="nav-item dropdown mx-0 mx-lg-1">
                         <a class="nav-link py-3 px-0 px-lg-3 rounded dropdown-toggle" href="#about" id="aboutDropdown"
                             role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            About
+                            Nosotros
                         </a>
                         <ul class="dropdown-menu bg-secondary text-uppercase" aria-labelledby="aboutDropdown">
-                            <li><a id="btnPortfolioIndiv" class="dropdown-item text-white" href="portfIndividual1">Alba</a></li>
-                            <li><a id="btnPortfolioIndiv" class="dropdown-item text-white" href="portfIndividual1">Pedro</a></li>
-                            <li><a id="btnPortfolioIndiv" class="dropdown-item text-white" href="portfIndividual1">Beatriz</a></li>
+                                <li><a id="btnPortfolioIndiv" class="dropdown-item text-white" href="portfIndividual1" 
+                                onclick="setParticipantName('Alba')">Alba</a></li>
+                                <li><a id="btnPortfolioIndiv" class="dropdown-item text-white" href="portfIndividual1" 
+                                onclick="setParticipantName('Pedro')">Pedro</a></li>
+                                <li><a id="btnPortfolioIndiv" class="dropdown-item text-white" href="portfIndividual1" 
+                                onclick="setParticipantName('Beatriz')">Beatriz</a></li>
                         </ul>
                     </li>
                     
@@ -56,6 +59,8 @@ npm install express mysql2 cors  # Instala Express, mysql2 y CORS
         <div class="presentation-text">
             <h1 id="participant-name"></h1> <!-- Este valor será reemplazado dinámicamente -->
             <p id="participant-description"></p> <!-- Este valor será reemplazado dinámicamente -->
+            <a id="github-link" href="">Github</a> 
+
             <div class="imgMovil"></div>
         </div>
     </div>
