@@ -250,7 +250,7 @@ a {
   text-decoration: underline;
 }
 a:hover {
-  color: var(--bs-link-hover-color);
+  color: white;
 }
 
 a:not([href]):not([class]), a:not([href]):not([class]):hover {
@@ -600,7 +600,8 @@ progress {
 
 .img-fluid {
   max-width: 100%;
-  height: auto;
+  height: 300px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .img-thumbnail {
@@ -2811,11 +2812,31 @@ textarea.form-control-lg {
   background-color: var(--bs-btn-hover-bg);
   border-color: var(--bs-btn-hover-border-color);
 } */
- .btn:hover{
-    color: #2E2E3A; /* Gris Carbón para el texto en hover */
-  background-color: #BFA2DB; /* Lavanda Pastel en hover */
-  border-color: #9F80C5;
- }
+ 
+.btn1{
+  color: #ffffff; 
+background-color: #74534c; 
+/* border-color: #4e3a36; */
+}
+.btn1:hover{
+  border-color: #4e3a36;
+}
+.btn2{
+  color: #ffffff; /* Gris Carbón para el texto en hover */
+background-color: #ffbbc8; /* Lavanda Pastel en hover */
+/* border-color: #f59dad; */
+}
+.btn2:hover{
+  border-color: #f59dad;
+}
+.btn3{
+  color: #ffffff; /* Gris Carbón para el texto en hover */
+background-color: #98c0d6; /* Lavanda Pastel en hover */
+/* border-color: #63abd2; */
+}
+.btn3:hover{
+  border-color: #63abd2;
+}
  
 .btn-check + .btn:hover {
   color: var(--bs-btn-color);
@@ -11024,6 +11045,7 @@ html {
   max-width: 25rem;
   border-radius: 0.5rem;
   overflow: hidden;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
 }
 .portfolio .portfolio-item .portfolio-item-caption {
   position: absolute;
@@ -11031,8 +11053,7 @@ html {
   left: 0;
   transition: all 0.2s ease-in-out;
   opacity: 0;
-  background-color: rgba(159, 128, 197, 0.9)
-  ;
+  background-color: rgba(159, 128, 197, 0.9);
 }
 .portfolio .portfolio-item .portfolio-item-caption:hover {
   opacity: 1;
