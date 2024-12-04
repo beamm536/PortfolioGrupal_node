@@ -7,7 +7,7 @@ const mysql = require("mysql2"); //importacion para la base de datos
 const conexion = mysql.createConnection({
     host: 'localhost',
     user: 'root',
-    password: 'programacion2023', 
+    password: 'PEDRO2843', 
     database: 'portfolio',
     
 });

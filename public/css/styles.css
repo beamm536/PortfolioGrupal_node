@@ -2813,31 +2813,48 @@ textarea.form-control-lg {
   border-color: var(--bs-btn-hover-border-color);
 } */
  
-.btn1{
-  color: #ffffff; 
-background-color: #74534c; 
-/* border-color: #4e3a36; */
+/* Estilos generales de los botones */
+.btn-social {
+  display: inline-block;
+  padding: 10px 15px;
+  font-size: 20px;
+  border-radius: 50%;
+  transition: background-color 0.3s ease, transform 0.3s ease;
 }
-.btn1:hover{
-  border-color: #4e3a36;
+
+/* Estilo del primer botón (btn1) */
+.btn1 {
+  background-color: #74534c; /* Color LinkedIn */
+  color: white;
 }
-.btn2{
-  color: #ffffff; /* Gris Carbón para el texto en hover */
-background-color: #ffbbc8; /* Lavanda Pastel en hover */
-/* border-color: #f59dad; */
+
+.btn1:hover {
+  background-color: #74534c9b; /* Color más claro para hover */
+  transform: scale(1.1); /* Efecto de agrandamiento */
 }
-.btn2:hover{
-  border-color: #f59dad;
+
+/* Estilo del segundo botón (btn2) */
+.btn2 {
+  background-color: #ffbbc8; /* Color de LinkedIn alternativo */
+  color: white;
 }
-.btn3{
-  color: #ffffff; /* Gris Carbón para el texto en hover */
-background-color: #98c0d6; /* Lavanda Pastel en hover */
-/* border-color: #63abd2; */
+
+.btn2:hover {
+  background-color: #ffbbc7aa; /* Color más claro para hover */
+  transform: scale(1.1);
 }
-.btn3:hover{
-  border-color: #63abd2;
+
+/* Estilo del tercer botón (btn3) */
+.btn3 {
+  background-color: #98c0d6; /* Color de LinkedIn */
+  color: white;
 }
- 
+
+.btn3:hover {
+  background-color: #98c0d699; /* Color más claro para hover */
+  transform: scale(1.1);
+}
+
 .btn-check + .btn:hover {
   color: var(--bs-btn-color);
   background-color: var(--bs-btn-bg);
