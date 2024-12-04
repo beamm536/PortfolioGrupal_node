@@ -4,7 +4,7 @@ body {
   margin: 0;
   padding: 0;
   background: #f7f7f7;
-  color: #333;
+  color: #4e3a38;
   overflow-x: hidden;
 }
 
@@ -90,6 +90,7 @@ body {
   height: 100px;
   margin-right: 15px;
   object-fit: cover;
+  z-index: 100;
 }
 
 /* Estilo alternado para los elementos (invertido) */
@@ -252,18 +253,19 @@ body {
   .imgMovil {
     
     width:auto;
-    height: 120px;
+    height: 230px; /*cambiado para ajustar el alto de la img y q quede decente en la vista de movil*/
     background-size: cover;
     background-position: center;
+    z-index: 100;
   }
   
-  /* Estilos responsivos */
+  /* Estilos responive */
   @media (max-width: 1024px) {/*Ns pq no me funciona en tablet*/
     .presentation {
       background-image: none; /* Elimina el fondo gris en pantallas más grandes */
       display: flex;
-    justify-content: center; /* Centra los elementos horizontalmente */
-    align-items: center;     /* Centra los elementos verticalmente */
+    justify-content: center; 
+    align-items: center;     
     text-align: center; 
     }
 
@@ -277,6 +279,7 @@ body {
   
     .imgMovil {
       display: block; /* Muestra la imagen de fondo en dispositivos más pequeños */
+      
     }
   }
   

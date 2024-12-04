@@ -56,6 +56,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 img.onerror = function() {
                   presentation.style.backgroundColor = "gray";
                   imgMovil.style.backgroundColor = "gray"; // También asegúrate de que el div tenga fondo gris en caso de error
+                  console.error("Error al cargar la imagen", imgMovil);
                 };
               
 
@@ -88,12 +89,16 @@ document.addEventListener("DOMContentLoaded", function () {
                 content.classList.add("timeline-content");
                 content.classList.add("hidden");
   
-                // Verificamos si hay imagen
+                // Verificamos si hay imagen--> TIMELINE
+                const rutasImgsTimeline = "../assets/imgsIndiv/"; //ruta general de dnd va a sacar las imgs
+
                 const img = document.createElement("img");
                 if (acontecimiento.img_acontecimiento && acontecimiento.img_acontecimiento !== "") {
-                    img.src = acontecimiento.img_acontecimiento;
-                    img.alt = acontecimiento.nombre_acontecimiento;
+                    img.src = `${rutasImgsTimeline}${acontecimiento.img_acontecimiento}`;//acontecimiento.img_acontecimiento;
+                    img.alt = acontecimiento.nombre_acontecimiento || "Imagen asociada";
                 } else {
+                    console.error("No hay imagen asociada a este acontecimiento");
+
                     // Si no hay imagen, mostramos un cuadrado rosa
                     const placeholder = document.createElement("div");
                     placeholder.classList.add("image-placeholder");
