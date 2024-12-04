@@ -143,6 +143,10 @@ document.addEventListener("DOMContentLoaded", function () {
         })
         .catch((error) => console.error("Error al cargar los acontecimientos:", error));
   });
+
+  function setParticipantName(name) {
+    localStorage.setItem('participantName', name);
+  }
   
   function typeWriterEffect(element, text, speed = 100) {
     element.textContent = ""; // Limpia el contenido del elemento
