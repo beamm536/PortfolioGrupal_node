@@ -3807,7 +3807,8 @@ textarea.form-control-lg {
     align-items: center;
     justify-content: space-between;
     padding: var(--bs-navbar-padding-y) var(--bs-navbar-padding-x);
-    background-color: #BFA2DB; /* Fondo Lavanda Pastel */
+    /*background-color: #BFA2DB; /* Fondo Lavanda Pastel */
+    background-color: #1abc9c;
   }
   
 .navbar > .container,
@@ -8190,6 +8191,13 @@ textarea.form-control-lg {
     background-color: rgba(191, 162, 219, var(--bs-bg-opacity)) !important; /* Lavanda Pastel */
     color: #F4EDE8; 
   }
+  
+  .bg-primary.verde-color-menu {
+    --bs-bg-opacity: 1;
+    background-color: #1abc9c !important; /* Verde */
+    color: #F4EDE8 !important; /* Crema */
+}
+
 
 /* .bg-secondary {
   --bs-bg-opacity: 1;
@@ -8369,6 +8377,9 @@ textarea.form-control-lg {
   visibility: hidden !important;
 }
 
+.verde-color-menu{
+  color: #1abc9c
+}
 .dropdown-menu .dropdown-item {
   font-size: 1rem; /* Incrementa el tamaño del texto (20px aproximadamente) */
   padding: 0.5rem 1rem; /* Aumenta el espacio interno del botón */
