@@ -163,6 +163,8 @@ body {
 }
 /* Ajustes para pantallas móviles */
 @media (max-width: 767px) {
+  
+ 
   .timeline-line {
     left: 0; /* Asegura que la línea esté alineada al borde izquierdo */
     transform: translateX(0); /* Sin desplazamiento */
@@ -284,17 +286,3 @@ body {
       
     }
   }
-  
-  /* Diseño responsive 
-  @media (max-width: 768px) {
-    .timeline-content {
-      width: 80%;
-      position: relative;
-      text-align: center;
-    }
-  
-    .timeline-label {
-      display: none;
-    }
-  }*/
-  
