@@ -11179,5 +11179,11 @@ html {
     color: #fff;
 }
 
+@media (max-width: 767px){
+  #github-link a {
+    font-size: 1.2rem; /* Cambia este valor según el tamaño que prefieras */
+  }
+}
+
 
 
