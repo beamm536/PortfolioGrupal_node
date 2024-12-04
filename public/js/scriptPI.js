@@ -28,6 +28,7 @@ document.addEventListener("DOMContentLoaded", function () {
             //     githubLink.innerHTML = '<i class="fab fa-github"></i> ' + participantNamePassing + ' - ' + githubLink.innerHTML;
                 
             // }
+            
             if (participantNamePassing === 'Alba') {
               let parrafoIntro = document.getElementById('participant-description'); 
               let tituloNombre = document.getElementById('participant-name'); 
