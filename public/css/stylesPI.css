@@ -227,7 +227,9 @@ body {
   margin-top: 7%; /* Asegúrate de que el margen sea suficiente para que no se solape */
   position: relative;
 }
-
+#participant-name{
+  margin-top: 15%;
+}
 #participant-name, #participant-description {
   text-align: left; /* Alineación por defecto a la izquierda */
 }
