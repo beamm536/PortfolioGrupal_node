@@ -2597,6 +2597,10 @@ textarea.form-control-lg {
   border-bottom-left-radius: 0;
 }
 
+#btnPortfolioIndiv-dropdown {
+  font-size: 1rem;
+}
+
 .valid-feedback {
   display: none;
   width: 100%;
